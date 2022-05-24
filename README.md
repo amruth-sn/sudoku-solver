@@ -1,2 +1,2 @@
 # sudoku-solver
-Sudoku Solver
+Sudoku algorithm using recursive backtracking in Java

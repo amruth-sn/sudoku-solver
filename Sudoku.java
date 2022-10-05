@@ -4,10 +4,7 @@
  * Implementation of a class that represents a Sudoku puzzle and solves
  * it using recursive backtracking.
  *
- * Computer Science 112, Boston University
- *
- * Amruth Niranjan
- *
+ * Amruth Niranjan, Boston University
  */
 
 import java.io.*;   // allows us to read from a file

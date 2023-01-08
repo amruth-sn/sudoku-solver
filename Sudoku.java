@@ -23,31 +23,17 @@ public class Sudoku {
     
     /*
      * 3-D array allows us to determine if a given subgrid
-     * already contains a given value:
-     *
-     *    (0,0)   (0,1)   (0,2)
-     *
-     *    (1,0)   (1,1)   (1,2)
-     * 
-     *    (2,0)   (2,1)   (2,2)
-     * 
-     * ex. subgridHasVal[0][2][5] will be true if the subgrid
-     * in the upper right-hand corner already has a 5 in it, 
-     * and false otherwise
+     * already contains a given value
      */
     private boolean[][][] subgridHasVal;
-    
-
     private boolean[][] colValue;
     private boolean[][] rowValue;
     
 
     public Sudoku() {
         this.grid = new int[9][9];
-        this.valIsFixed = new boolean[9][9];     
-        
+        this.valIsFixed = new boolean[9][9];             
         this.subgridHasVal = new boolean[3][3][10];        
-
         this.colValue = new boolean[9][10];
         this.rowValue = new boolean[9][10];
     }
@@ -72,8 +58,6 @@ public class Sudoku {
     public void removeVal(int val, int row, int col) {
         this.grid[row][col] = 0;
         this.subgridHasVal[row/3][col/3][val] = false;
-        
-        /*** UPDATE YOUR ADDITIONAL FIELDS HERE. ***/
         this.colValue[col][val] = false;
         this.rowValue[row][val] = false;
     }  
